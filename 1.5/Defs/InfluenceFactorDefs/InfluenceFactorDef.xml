@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<VC_Territory.InfluenceFactorDef>
+    <defName>InfluenceFactor</defName>
+      <factionFactorDict>
+        <li><key>PlayerColony</key><value>10.0</value></li>
+        <li><key>PlayerTribe</key><value>10.0</value></li>
+        <li><key>Ancients</key><value>10.0</value></li>
+        <li><key>AncientsHostile</key><value>10.0</value></li>
+        <li><key>Mechanoid</key><value>10.0</value></li>
+        <li><key>Insect</key><value>10.0</value></li>
+        <li><key>Pirate</key><value>10.0</value></li>
+        <li><key>OutlanderCivil</key><value>10.0</value></li>
+        <li><key>TribeCivil</key><value>10.0</value></li>
+        <li><key>OutlanderRough</key><value>10.0</value></li>
+        <li><key>TribeRough</key><value>10.0</value></li>
+        <li><key>Empire</key><value>10.0</value></li> <!-- Royalty -->
+        <li><key>OutlanderRefugee</key><value>10.0</value></li> <!-- Royalty -->
+        <li><key>Beggars</key><value>10.0</value></li> <!-- Ideology -->
+        <li><key>Pilgrims</key><value>10.0</value></li> <!-- Ideology -->
+        <li><key>PirateWaster</key><value>10.0</value></li> <!-- Biotech -->
+        <li><key>Sanguophages</key><value>10.0</value></li> <!-- Biotech -->
+        <li><key>HoraxCult</key><value>10.0</value></li> <!-- Anomaly -->
+        <li><key>Entities</key><value>10.0</value></li> <!-- Anomaly -->
+      </factionFactorDict>
+
+      <biomeFactorDict>
+        <li><key>SeaIce</key><value>0.7</value></li>
+        <li><key>IceSheet</key><value>0.75</value></li>
+        <li><key>ExtremeDesert</key><value>0.76</value></li>
+        <li><key>Ocean</key><value>0.4</value></li>
+      
+        <li><key>ColdBog</key><value>0.80</value></li>
+        <li><key>Lake</key><value>0.6</value></li>
+        <li><key>Tundra</key><value>0.83</value></li>
+        <li><key>Desert</key><value>0.84</value></li>
+      
+        <li><key>TemperateSwamp</key><value>0.86</value></li>
+        <li><key>TropicalSwamp</key><value>0.87</value></li>
+      
+        <li><key>AridShrubland</key><value>0.90</value></li>
+        <li><key>BorealForest</key><value>0.92</value></li>
+      
+        <li><key>TemperateForest</key><value>0.96</value></li>
+        <li><key>TropicalRainforest</key><value>0.9</value></li>
+      </biomeFactorDict>
+      
+      <hillinessFactorDict>
+        <li>
+          <key>Flat</key>
+          <value>0.95</value>
+        </li>
+        <li>
+          <key>SmallHills</key>
+          <value>0.90</value>
+        </li>
+        <li>
+          <key>LargeHills</key>
+          <value>0.85</value>
+        </li>
+        <li>
+          <key>Mountainous</key>
+          <value>0.80</value>
+        </li>
+        <li>
+          <key>Impassable</key>
+          <value>0.75</value>
+        </li>
+      </hillinessFactorDict>
+      <minInfluence>0.1</minInfluence>
+      <maxDistance>100</maxDistance>
+      <DefaultHillinessFactor>0.0</DefaultHillinessFactor>
+      <DefaultBiomeFactor>0.0</DefaultBiomeFactor>
+      <DefaultFactionFactor>10.0</DefaultFactionFactor>
+    </VC_Territory.InfluenceFactorDef>
+</Defs>

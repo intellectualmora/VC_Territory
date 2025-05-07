@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	
+<MapModeFramework.MapModeDef Name="MapMode_Territory" Abstract="True">
+    <mapModeClass>VC_Territory.MapMode_Territory</mapModeClass>
+    <worldLayerClass>VC_Territory.WorldLayer_MapMode_Territory</worldLayerClass>
+    <drawWorldObjects>true</drawWorldObjects>
+    <drawHills>true</drawHills>
+    <drawRivers>true</drawRivers>
+    <drawRoads>true</drawRoads>
+    <drawPollution>true</drawPollution>
+    <disableFeaturesText>false</disableFeaturesText>
+    <canCache>false</canCache>
+    <RegionProperties>
+			<overrideSelector>true</overrideSelector>
+			<doBorders>true</doBorders>
+			<borderWidth>0.5</borderWidth>
+		</RegionProperties>
+</MapModeFramework.MapModeDef>
+
+
+<MapModeFramework.MapModeDef ParentName="MapMode_Territory">
+    <defName>Territory</defName>
+    <label>Territory</label>
+    <iconPath>UI/MapModes/Territory</iconPath>
+</MapModeFramework.MapModeDef>
+</Defs>

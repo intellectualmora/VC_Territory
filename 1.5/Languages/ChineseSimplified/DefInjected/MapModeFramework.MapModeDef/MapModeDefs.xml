@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Territory.label>领土</Territory.label>
+    <!-- EN: Animal Commonality -->
+    <AnimalCommonality.label>动物圈</AnimalCommonality.label>
+  
+    <!-- EN: Biome -->
+    <Biome.label>生态圈</Biome.label>
+    
+    <!-- EN: Default -->
+    <Default.label>默认</Default.label>
+    
+    <!-- EN: Elevation -->
+    <Elevation.label>海拔</Elevation.label>
+    
+    <!-- EN: Features -->
+    <Features.label>特征</Features.label>
+    
+    <!-- EN: Growing Period -->
+    <GrowingPeriod.label>生长期</GrowingPeriod.label>
+    
+    <!-- EN: Plant Commonality -->
+    <PlantCommonality.label>植物圈</PlantCommonality.label>
+    
+    <!-- EN: Rainfall -->
+    <Rainfall.label>降水量</Rainfall.label>
+    
+    <!-- EN: Temperature -->
+    <Temperature.label>温度</Temperature.label>
+</LanguageData>

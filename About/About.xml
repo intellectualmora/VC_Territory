@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Mora's Territory(莫拉的领土扩展)</name>
+	<author>Chemora</author>
+	<supportedVersions><li>1.5</li></supportedVersions>
+	<packageId>Chemora.VCTerritory</packageId>
+	<description>这是一个基于 Map Mode Framework 的领土扩展模组。目前实现的功能为根据势力自动染色地图上的领土区域，用于展示各势力的地盘范围，添加和摧毁据点时更新领土区域。给Tile添加了Territory类扩展地块用途，以及Settlement添加了TerritorySettlement类，TerritoryManager提供接口，为以后扩展玩法做接口，目前暂时没有额外的玩法。Currently, the mod automatically colors territory regions on the map based on faction control, visually displaying each faction's domain. It updates territory regions when settlements are added or removed. A Territory class has been added to extend the functionality of map tiles, and a TerritorySettlement class has been introduced for settlements. The TerritoryManager provides interfaces to support future gameplay expansions, although no additional gameplay features are implemented at this stage.</description>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+		</li>
+		<li>
+			<packageId>NozoMe.MapModeFramework</packageId>
+			<displayName>Map Mode Framework</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/3296654393</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>brrainz.harmony</li>
+		<li>NozoMe.MapModeFramework</li>
+	</loadAfter>
+</ModMetaData>

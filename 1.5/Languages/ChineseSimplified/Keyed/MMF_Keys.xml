@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+	<!-- EN: Current Map Mode -->
+  <MMF.CurrentMapMode>当前地图模式</MMF.CurrentMapMode>
+	
+	<!-- EN: Draw Settings -->
+  <MMF.DrawSettings>绘制设置</MMF.DrawSettings>
+	<!-- EN: Include Water -->
+  <MMF.DrawSettings.IncludeWater>包括水域</MMF.DrawSettings.IncludeWater>
+	<!-- EN: Opacity -->
+  <MMF.DrawSettings.Opacity>不透明度</MMF.DrawSettings.Opacity>
+	<!-- EN: Draw World Objects -->
+  <MMF.DrawSettings.DrawWorldObjects>绘制世界对象</MMF.DrawSettings.DrawWorldObjects>
+	<!-- EN: Draw Hills -->
+  <MMF.DrawSettings.DrawHills>绘制丘陵</MMF.DrawSettings.DrawHills>
+	<!-- EN: Draw Rivers -->
+  <MMF.DrawSettings.DrawRivers>绘制河流</MMF.DrawSettings.DrawRivers>
+	<!-- EN: Draw Roads -->
+  <MMF.DrawSettings.DrawRoads>绘制道路</MMF.DrawSettings.DrawRoads>
+	<!-- EN: Draw Pollution -->
+  <MMF.DrawSettings.DrawPollution>绘制污染</MMF.DrawSettings.DrawPollution>
+	<!-- EN: Disable Features Text -->
+  <MMF.DrawSettings.DisableFeaturesText>禁用功能文本</MMF.DrawSettings.DisableFeaturesText>
+	<!-- EN: Display Labels -->
+  <MMF.DrawSettings.DisplayLabels>显示标签</MMF.DrawSettings.DisplayLabels>
+	<!-- EN: Do Tooltip -->
+  <MMF.DrawSettings.DoTooltip>执行提示</MMF.DrawSettings.DoTooltip>
+	
+	<!-- EN: Drag button to sort -->
+  <MMF.UI.Tooltip.DragToSort>拖动按钮进行排序</MMF.UI.Tooltip.DragToSort>
+	<!-- EN: Prepared {0} out of {1} tiles -->
+  <MMF.UI.LoadProgress>已准备｛1｝个区块中的｛0｝个</MMF.UI.LoadProgress>
+	<!-- EN: Enable caching for this map mode if you would like to shorten regeneration time. -->
+  <MMF.UI.TryCache>如果要缩短再生时间，请为此模式启用缓存。</MMF.UI.TryCache>
+	<!-- EN: Caching -->
+  <MMF.UI.Caching>缓存中</MMF.UI.Caching>
+	
+	<!-- EN: Cache Data -->
+  <MMF.Settings.CacheData>缓存数据</MMF.Settings.CacheData>
+	<!-- EN: Enable caching -->
+  <MMF.Settings.EnableCaching>启用缓存</MMF.Settings.EnableCaching>
+	<!-- EN: Cache on start -->
+  <MMF.Settings.CacheOnStart>缓存时候启用</MMF.Settings.CacheOnStart>
+	
+	<!-- EN: Commonality -->
+  <MMF.Commonality>圈</MMF.Commonality>
+	<!-- EN: Type -->
+  <MMF.Type>类型</MMF.Type>
+	
+	<!-- EN: Island -->
+  <MMF.WorldFeatures.Island>岛屿</MMF.WorldFeatures.Island>
+	<!-- EN: Archipelago -->
+  <MMF.WorldFeatures.Archipelago>群岛</MMF.WorldFeatures.Archipelago>
+	<!-- EN: Peninsula -->
+  <MMF.WorldFeatures.Peninsula>半岛</MMF.WorldFeatures.Peninsula>
+	<!-- EN: Bay -->
+  <MMF.WorldFeatures.Bay>海湾</MMF.WorldFeatures.Bay>
+	<!-- EN: Lake -->
+  <MMF.WorldFeatures.Lake>湖泊</MMF.WorldFeatures.Lake>
+	<!-- EN: Sea -->
+  <MMF.WorldFeatures.Sea>地中海</MMF.WorldFeatures.Sea>
+	<!-- EN: Ocean Bay -->
+  <MMF.WorldFeatures.OceanBay>海湾</MMF.WorldFeatures.OceanBay>
+	<!-- EN: Ocean -->
+  <MMF.WorldFeatures.Ocean>海洋</MMF.WorldFeatures.Ocean>
+	<!-- EN: Outer Ocean -->
+  <MMF.WorldFeatures.OuterOcean>外海</MMF.WorldFeatures.OuterOcean>
+	<!-- EN: Mountain Range -->
+  <MMF.WorldFeatures.MountainRange>山脉</MMF.WorldFeatures.MountainRange>
+	<!-- EN: Desert -->
+  <MMF.WorldFeatures.Desert>沙漠</MMF.WorldFeatures.Desert>
+	<!-- EN: Temperate Swamp -->
+  <MMF.WorldFeatures.TemperateSwamp>温带沼泽</MMF.WorldFeatures.TemperateSwamp>
+	<!-- EN: Tropical Swamp -->
+  <MMF.WorldFeatures.TropicalSwamp>热带沼泽</MMF.WorldFeatures.TropicalSwamp>
+	<!-- EN: Cold Bog -->
+  <MMF.WorldFeatures.ColdBog>寒带沼泽</MMF.WorldFeatures.ColdBog>
+	<!-- EN: Temperate Forest -->
+  <MMF.WorldFeatures.TemperateForest>温带森林</MMF.WorldFeatures.TemperateForest>
+	<!-- EN: Tropical Rainforest -->
+  <MMF.WorldFeatures.TropicalRainforest>热带雨林</MMF.WorldFeatures.TropicalRainforest>
+	<!-- EN: Boreal Forest -->
+  <MMF.WorldFeatures.BorealForest>寒带森林</MMF.WorldFeatures.BorealForest>
+	<!-- EN: Arid Shrubland -->
+  <MMF.WorldFeatures.AridShrubland>干旱灌木原</MMF.WorldFeatures.AridShrubland>
+	<!-- EN: Ice Sheet -->
+  <MMF.WorldFeatures.IceSheet>冰盖</MMF.WorldFeatures.IceSheet>
+	<!-- EN: Tundra -->
+  <MMF.WorldFeatures.Tundra>苔原</MMF.WorldFeatures.Tundra>
+</LanguageData>
