@@ -50,6 +50,7 @@ namespace VC_Territory
         public static void InfluenceInitize()
         {
             territories.Clear();
+            territorySettlementList.Clear();
             foreach (var settle in Find.WorldObjects.Settlements)
             {
                 if (settle.Faction != null)

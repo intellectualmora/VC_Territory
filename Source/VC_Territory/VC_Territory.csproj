@@ -59,6 +59,8 @@
     <Compile Include="MapMode_Territory.cs" />
     <Compile Include="Materials.cs" />
     <Compile Include="Page_SelectStartingSite_PostOpen.cs" />
+    <Compile Include="Patch_Scenario.cs" />
+    <Compile Include="Patch_UIRoot_Entry.cs" />
     <Compile Include="Patch_Settlement.cs" />
     <Compile Include="Patch_WorldObjectsHolder_Add.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

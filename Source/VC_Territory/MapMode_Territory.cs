@@ -30,11 +30,12 @@ namespace VC_Territory
             //    Materials.Init(); // 安全执行图形资源初始化
             //}
             base.Initialize();
+            
         }
         public override Material GetMaterial(int tile)
         {
             return VC_Territory.Materials.MatForTerritory(TerritoryManager.territories.Find(t => t.tileId == tile));
-        }
+        } 
         public override string GetTileLabel(int tile)
         {
             Territory t = TerritoryManager.GetTerritory(tile);
@@ -62,15 +63,12 @@ namespace VC_Territory
         }
         public override void SetRegions()
         {
-            if (ThreadChecker.IsMainThread)
-            {
-                Materials.Init(); // 安全执行图形资源初始化
-            }
             regions.Clear();
             foreach (var ts in TerritoryManager.territorySettlementList)
             {
                 AddRegions(ts);
             }
+
         }
         public void AddRegions(TerritorySettlement ts)
         {
@@ -86,7 +84,7 @@ namespace VC_Territory
                 }
                 catch (Exception ex)
                 {
-
+                    
                 }
             }
         }

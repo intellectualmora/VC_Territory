@@ -3,11 +3,43 @@
   "WorkspaceRootPath": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\mapmode_territory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\vc_territory\\source\\vc_territory\\territorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:territorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\vc_territory\\source\\vc_territory\\page_selectstartingsite_postopen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:page_selectstartingsite_postopen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\materials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:materials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\vc_territory\\source\\vc_territory\\patch_uiroot_entry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:patch_uiroot_entry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\vc_territory\\source\\vc_territory\\patch_scenario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:patch_scenario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\patch_settlement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:patch_settlement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\patch_worldobjectsholder_add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:patch_worldobjectsholder_add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\territory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:territory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\vc_territory\\source\\vc_territory\\mapmode_territory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:mapmode_territory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\vc_territory\\source\\vc_territory\\worldlayer_mapmode_territory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\worldlayer_mapmode_territory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:worldlayer_mapmode_territory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,39 +47,15 @@
       "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:vc_mymod_definject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\vc_territory\\source\\vc_territory\\territorysettlement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\territorysettlement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:territorysettlement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\vc_territory\\source\\vc_territory\\territorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:territorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\territory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:territory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\vc_territory\\source\\vc_territory\\patch_worldobjectsholder_add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:patch_worldobjectsholder_add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\patch_settlement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:patch_settlement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\vc_territory\\source\\vc_territory\\page_selectstartingsite_postopen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:page_selectstartingsite_postopen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\vc_territory\\source\\vc_territory\\materials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:materials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\vc_territory\\source\\vc_territory\\influencefactordef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\influencefactordef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:influencefactordef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\vc_territory\\source\\vc_territory\\itickablecomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\itickablecomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA432279-42D5-4AE8-8ACA-F74CE5E0B523}|VC_Territory.csproj|solutionrelative:itickablecomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -62,46 +70,46 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TerritorySettlement.cs",
-              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\TerritorySettlement.cs",
-              "RelativeDocumentMoniker": "TerritorySettlement.cs",
-              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\TerritorySettlement.cs",
-              "RelativeToolTip": "TerritorySettlement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA9AAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Patch_Scenario.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Patch_Scenario.cs",
+              "RelativeDocumentMoniker": "Patch_Scenario.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Patch_Scenario.cs",
+              "RelativeToolTip": "Patch_Scenario.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA0AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T05:47:51.501Z",
+              "WhenOpened": "2025-05-08T08:47:19.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Patch_WorldObjectsHolder_Add.cs",
-              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Patch_WorldObjectsHolder_Add.cs",
-              "RelativeDocumentMoniker": "Patch_WorldObjectsHolder_Add.cs",
-              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Patch_WorldObjectsHolder_Add.cs",
-              "RelativeToolTip": "Patch_WorldObjectsHolder_Add.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Patch_UIRoot_Entry.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Patch_UIRoot_Entry.cs",
+              "RelativeDocumentMoniker": "Patch_UIRoot_Entry.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Patch_UIRoot_Entry.cs",
+              "RelativeToolTip": "Patch_UIRoot_Entry.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T05:18:06.123Z",
+              "WhenOpened": "2025-05-08T08:20:20.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Page_SelectStartingSite_PostOpen.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Page_SelectStartingSite_PostOpen.cs",
+              "RelativeDocumentMoniker": "Page_SelectStartingSite_PostOpen.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Page_SelectStartingSite_PostOpen.cs",
+              "RelativeToolTip": "Page_SelectStartingSite_PostOpen.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T07:57:30.597Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Territory.cs",
-              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Territory.cs",
-              "RelativeDocumentMoniker": "Territory.cs",
-              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Territory.cs",
-              "RelativeToolTip": "Territory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T17:30:06.585Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Patch_Settlement.cs",
               "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Patch_Settlement.cs",
               "RelativeDocumentMoniker": "Patch_Settlement.cs",
@@ -114,20 +122,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TerritoryManager.cs",
-              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\TerritoryManager.cs",
-              "RelativeDocumentMoniker": "TerritoryManager.cs",
-              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\TerritoryManager.cs",
-              "RelativeToolTip": "TerritoryManager.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAwwKkAAAANAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Patch_WorldObjectsHolder_Add.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Patch_WorldObjectsHolder_Add.cs",
+              "RelativeDocumentMoniker": "Patch_WorldObjectsHolder_Add.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Patch_WorldObjectsHolder_Add.cs",
+              "RelativeToolTip": "Patch_WorldObjectsHolder_Add.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T17:30:15.739Z",
+              "WhenOpened": "2025-05-07T05:18:06.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Territory.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Territory.cs",
+              "RelativeDocumentMoniker": "Territory.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Territory.cs",
+              "RelativeToolTip": "Territory.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T17:30:06.585Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Materials.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Materials.cs",
+              "RelativeDocumentMoniker": "Materials.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Materials.cs",
+              "RelativeToolTip": "Materials.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T08:08:29.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TerritoryManager.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\TerritoryManager.cs",
+              "RelativeDocumentMoniker": "TerritoryManager.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\TerritoryManager.cs",
+              "RelativeToolTip": "TerritoryManager.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAwDUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T08:36:53.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MapMode_Territory.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\MapMode_Territory.cs",
+              "RelativeDocumentMoniker": "MapMode_Territory.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\MapMode_Territory.cs",
+              "RelativeToolTip": "MapMode_Territory.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAAEQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T17:29:57.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "VC_MyMod_DefInject.cs",
               "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\VC_MyMod_DefInject.cs",
               "RelativeDocumentMoniker": "VC_MyMod_DefInject.cs",
@@ -135,12 +195,11 @@
               "RelativeToolTip": "VC_MyMod_DefInject.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAxwAoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T17:28:29.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T17:28:29.782Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "WorldLayer_MapMode_Territory.cs",
               "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\WorldLayer_MapMode_Territory.cs",
               "RelativeDocumentMoniker": "WorldLayer_MapMode_Territory.cs",
@@ -153,46 +212,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MapMode_Territory.cs",
-              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\MapMode_Territory.cs",
-              "RelativeDocumentMoniker": "MapMode_Territory.cs",
-              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\MapMode_Territory.cs",
-              "RelativeToolTip": "MapMode_Territory.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAA7wCQAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "TerritorySettlement.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\TerritorySettlement.cs",
+              "RelativeDocumentMoniker": "TerritorySettlement.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\TerritorySettlement.cs",
+              "RelativeToolTip": "TerritorySettlement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T17:29:57.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T05:47:51.501Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Page_SelectStartingSite_PostOpen.cs",
-              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Page_SelectStartingSite_PostOpen.cs",
-              "RelativeDocumentMoniker": "Page_SelectStartingSite_PostOpen.cs",
-              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Page_SelectStartingSite_PostOpen.cs",
-              "RelativeToolTip": "Page_SelectStartingSite_PostOpen.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T05:17:30.22Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Materials.cs",
-              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Materials.cs",
-              "RelativeDocumentMoniker": "Materials.cs",
-              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\Materials.cs",
-              "RelativeToolTip": "Materials.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T08:08:29.378Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "InfluenceFactorDef.cs",
               "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\InfluenceFactorDef.cs",
               "RelativeDocumentMoniker": "InfluenceFactorDef.cs",
@@ -200,12 +232,11 @@
               "RelativeToolTip": "InfluenceFactorDef.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T08:08:43.904Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T08:08:43.904Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "ITickableComponent.cs",
               "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\VC_Territory\\Source\\VC_Territory\\ITickableComponent.cs",
               "RelativeDocumentMoniker": "ITickableComponent.cs",
@@ -213,8 +244,7 @@
               "RelativeToolTip": "ITickableComponent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T07:06:08.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T07:06:08.334Z"
             }
           ]
         }
