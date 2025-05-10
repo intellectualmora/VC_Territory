@@ -13,7 +13,7 @@ namespace VC_Territory
     [HarmonyPatch]
     public static class Patch_WorldObjectsHolder_Add
     {
-        [HarmonyPatch(typeof(WorldObjectsHolder), "Add")]
+        [HarmonyPatch(typeof(WorldObjectsHolder), "Add")] //添加据点触发领地增加并刷新地图
         [HarmonyPostfix]
         public static void Postfix(WorldObject o)
         {

@@ -18,6 +18,8 @@ namespace VC_Territory
         public static void Init_Prefix()
         {
               Materials.Init(); // 安全执行图形资源初始化
+              if (!VC_TerritorySetting.isInit)
+                    VC_TerritorySetting.Init();
         }
 
     }

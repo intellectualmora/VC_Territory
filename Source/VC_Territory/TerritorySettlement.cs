@@ -9,7 +9,7 @@ using Verse.Noise;
 
 namespace VC_Territory
 {
-    public class TerritorySettlement : IExposable
+    public class TerritorySettlement : IExposable //Settlement领土扩展类
     {
         public Settlement settlement;
         public List<Territory> territoryList => TerritoryManager.GetTerritoriesBySettlement(settlement);

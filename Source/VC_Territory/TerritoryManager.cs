@@ -7,18 +7,19 @@ using System.Linq;
 using UnityEngine;
 using Verse;
 using Verse.Noise;
+using static HarmonyLib.Code;
 
 namespace VC_Territory
 {
     public class TerritoryManager : GameComponent
     {
-        public static List<Territory> territories = new List<Territory>();
-        public static float minInfluence = InfluenceFactorDefOf.InfluenceFactor.minInfluence;
-        public static float maxDistance = InfluenceFactorDefOf.InfluenceFactor.maxDistance;
-        public static float DefaultHillinessFactor = InfluenceFactorDefOf.InfluenceFactor.DefaultHillinessFactor;
-        public static float DefaultBiomeFactor = InfluenceFactorDefOf.InfluenceFactor.DefaultBiomeFactor;
-        public static float DefaultFactionFactor = InfluenceFactorDefOf.InfluenceFactor.DefaultFactionFactor;
-        public static List<TerritorySettlement> territorySettlementList = new List<TerritorySettlement>();
+        public static List<Territory> territories = new List<Territory>(); //地图所有领土（只有被染色的才算领土，没染色的只是普通的tile）
+        public static float minInfluence => VC_TerritorySetting.minInfluence;//最低影响力，当传播低于这个值的时候停止传播
+        public static float maxDistance => VC_TerritorySetting.maxDistance;//影响力传播最远距离
+      //  public static float DefaultHillinessFactor = InfluenceFactorDefOf.InfluenceFactor.DefaultHillinessFactor;//默认地形传播衰减参数
+       // public static float DefaultBiomeFactor = InfluenceFactorDefOf.InfluenceFactor.DefaultBiomeFactor;//默认生物群落衰减参数
+        public static float DefaultFactionFactor = InfluenceFactorDefOf.InfluenceFactor.DefaultFactionFactor;//默认生物群落衰减参数
+        public static List<TerritorySettlement> territorySettlementList = new List<TerritorySettlement>(); //所有拥有领土的据点列表
         private int tickCounter = 0;
         private const int LongTermTickInterval = 60000; //一天结算一次
 
@@ -29,7 +30,7 @@ namespace VC_Territory
         {
         }
 
-        public static void SelectSettlement(Territory t)
+        public static void SelectSettlement(Territory t) // 为领土选出新的settlement
         {
             float maxInfluence = -1;
             foreach (var key in t.influencesDict.Keys)
@@ -47,10 +48,11 @@ namespace VC_Territory
                 RemoveTerritory(t);
             }
         }
-        public static void InfluenceInitize()
+        public static void InfluenceInit()
         {
             territories.Clear();
             territorySettlementList.Clear();
+            Log.Message("Find测试据点个数:"+Find.WorldObjects.Settlements.Count);
             foreach (var settle in Find.WorldObjects.Settlements)
             {
                 if (settle.Faction != null)
@@ -59,7 +61,7 @@ namespace VC_Territory
                 }
             }
         }
-        public static void Notify_Influence_Add(Settlement settle)
+        public static void Notify_Influence_Add(Settlement settle) //递归添加领土给settlement
         {
             if (territorySettlementList.Any(s => s.settlement == settle))
             {
@@ -86,7 +88,7 @@ namespace VC_Territory
                 SelectSettlement(it);
             }
         }
-        public static void Notify_Influence_Remove(Settlement settle)
+        public static void Notify_Influence_Remove(Settlement settle)//移除settlement和领土
         {
             if (!territorySettlementList.Any(s => s.settlement == settle))
             {
@@ -104,7 +106,7 @@ namespace VC_Territory
             }
            
         }
-        public static void Notify_Influence_Change(TerritorySettlement ts)
+        public static void Notify_Influence_Change(TerritorySettlement ts) //检查影响是否改变
         {
             if (!territorySettlementList.Contains(ts))
             {
@@ -141,14 +143,15 @@ namespace VC_Territory
         {
             territories.Remove(t);
         }
-        public static List<Territory> GetTerritoriesByFactionDef(FactionDef faction)
+        public static List<Territory> GetTerritoriesByFactionDef(FactionDef faction) //查询faction的所有领土
         {
             return territories.FindAll(t => t.factionDef == faction);
         }
-        public static List<Territory> GetTerritoriesBySettlement(Settlement settlement)
+        public static List<Territory> GetTerritoriesBySettlement(Settlement settlement) //查询settlement的所有领土
         {
             return territories.FindAll(t => t.settlement == settlement);
         }
+
         public override void GameComponentTick()
         {
             base.GameComponentTick();
@@ -180,12 +183,9 @@ namespace VC_Territory
         }
         public override void ExposeData()
         {
-
             Scribe_Collections.Look(ref territories, "VC_territories", LookMode.Deep);
             Scribe_Collections.Look(ref territorySettlementList, "VC_territorySettlementList", LookMode.Deep);
             Scribe_Collections.Look(ref extraComponents, "VC_TerritoryManagerExtraComponents", LookMode.Deep);
-
-
         }
     }
    

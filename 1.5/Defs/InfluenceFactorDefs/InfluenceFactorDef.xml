@@ -69,8 +69,8 @@
       </hillinessFactorDict>
       <minInfluence>0.1</minInfluence>
       <maxDistance>100</maxDistance>
-      <DefaultHillinessFactor>0.0</DefaultHillinessFactor>
-      <DefaultBiomeFactor>0.0</DefaultBiomeFactor>
+      <DefaultHillinessFactor>0.9</DefaultHillinessFactor>
+      <DefaultBiomeFactor>0.9</DefaultBiomeFactor>
       <DefaultFactionFactor>10.0</DefaultFactionFactor>
     </VC_Territory.InfluenceFactorDef>
 </Defs>
