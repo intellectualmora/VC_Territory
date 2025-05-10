@@ -4,7 +4,7 @@
 	<author>Chemora</author>
 	<supportedVersions><li>1.5</li></supportedVersions>
 	<packageId>Chemora.VCTerritory</packageId>
-	<description>这是一个基于 Map Mode Framework 的领土扩展模组。目前实现的功能为根据势力自动染色地图上的领土区域，用于展示各势力的地盘范围，添加和摧毁据点时更新领土区域。给Tile添加了Territory类扩展地块用途，以及Settlement添加了TerritorySettlement类，TerritoryManager提供接口，为以后扩展玩法做接口，目前暂时没有额外的玩法。Currently, the mod automatically colors territory regions on the map based on faction control, visually displaying each faction's domain. It updates territory regions when settlements are added or removed. A Territory class has been added to extend the functionality of map tiles, and a TerritorySettlement class has been introduced for settlements. The TerritoryManager provides interfaces to support future gameplay expansions, although no additional gameplay features are implemented at this stage.</description>
+	<description>这是一个基于 Map Mode Framework 的领土扩展模组。目前实现的功能为根据势力自动染色地图上的领土区域，用于展示各势力的地盘范围，添加和摧毁据点时更新领土区域。给Tile添加了Territory类扩展地块用途，以及Settlement添加了TerritorySettlement类，TerritoryManager提供接口，为以后扩展玩法做接口，目前暂时没有额外的玩法。PS:使用rocketman第一次渲染会失效请切换到其他地图模式再刷新一次。本mod不能中途加入游戏 Currently, the mod automatically colors territory regions on the map based on faction control, visually displaying each faction's domain. It updates territory regions when settlements are added or removed. A Territory class has been added to extend the functionality of map tiles, and a TerritorySettlement class has been introduced for settlements. The TerritoryManager provides interfaces to support future gameplay expansions, although no additional gameplay features are implemented at this stage.PS：The first render may fail when using RocketMan; please switch to another map mode and refresh again.This mod cannot be added mid-game.</description>
 	<modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>
@@ -18,8 +18,15 @@
 			<steamWorkshopUrl>steam://url/CommunityFilePage/3296654393</steamWorkshopUrl>
 		</li>
 	</modDependencies>
+	<loadBefore>
+		<li>ReGrowth.BOTR.Core</li>
+		<li>Krkr.RocketMan</li>
+	</loadBefore>
 	<loadAfter>
 		<li>brrainz.harmony</li>
 		<li>NozoMe.MapModeFramework</li>
 	</loadAfter>
+	<incompatibleWith>
+		<li>OskarPotocki.VFE.Medieval2</li>
+	</incompatibleWith>
 </ModMetaData>
