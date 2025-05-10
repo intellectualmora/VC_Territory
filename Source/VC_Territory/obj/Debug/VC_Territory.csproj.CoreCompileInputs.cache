@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 4dfd1032eeb5a9f48a152a5e7776aec1f9cc5a083644f4f63dbcfced61f7a980
+=======
+1ca24470a6d770235dcafac79d270db2463017465245de36dbd6472857577635
+>>>>>>> 31a9834 ( 添加了setting（mod options）,传播衰减因子获取从原先的def直接获取改为从setting里获取。)
 =======
 1ca24470a6d770235dcafac79d270db2463017465245de36dbd6472857577635
 >>>>>>> 31a9834 ( 添加了setting（mod options）,传播衰减因子获取从原先的def直接获取改为从setting里获取。)
