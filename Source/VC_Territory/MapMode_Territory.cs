@@ -25,10 +25,6 @@ namespace VC_Territory
 
         public override void Initialize()
         {
-            //if (ThreadChecker.IsMainThread)
-            //{
-            //    Materials.Init(); // 安全执行图形资源初始化
-            //}
             base.Initialize();
             
         }
@@ -64,6 +60,8 @@ namespace VC_Territory
         public override void SetRegions()
         {
             regions.Clear();
+            Log.Message("TerritoryManager测试据点个数:" + TerritoryManager.territorySettlementList.Count);
+
             foreach (var ts in TerritoryManager.territorySettlementList)
             {
                 AddRegions(ts);
@@ -84,7 +82,8 @@ namespace VC_Territory
                 }
                 catch (Exception ex)
                 {
-                    
+                    Log.Message(ex);
+
                 }
             }
         }

@@ -13,7 +13,7 @@ namespace VC_Territory
     [HarmonyPatch]
     public static class Patch_Settlement
     {
-        [HarmonyPatch(typeof(Settlement), "PostRemove")]
+        [HarmonyPatch(typeof(Settlement), "PostRemove")]//添加据点移除领地移除并刷新地图
         [HarmonyPostfix]
         public static void PostRemove_Postfix(Settlement __instance)
         {

@@ -9,7 +9,7 @@ using Verse.Noise;
 
 namespace VC_Territory
 {
-    public class Territory : IExposable
+    public class Territory : IExposable//Tile领土扩展类
     {
         public int tileId;
         public Settlement settlement;
@@ -65,8 +65,29 @@ namespace VC_Territory
             Hilliness hill = grid[tileId].hilliness;
             BiomeDef biome = grid[tileId].biome;
             float distance = Find.WorldGrid.ApproxDistanceInTiles(settle.Tile, tileId);
-            float hf = InfluenceFactorDefOf.InfluenceFactor.hillinessFactorDict.ContainsKey(hill) ? InfluenceFactorDefOf.InfluenceFactor.hillinessFactorDict[hill] : TerritoryManager.DefaultHillinessFactor;
-            float bf = InfluenceFactorDefOf.InfluenceFactor.biomeFactorDict.ContainsKey(biome) ? InfluenceFactorDefOf.InfluenceFactor.biomeFactorDict[biome] : TerritoryManager.DefaultBiomeFactor;
+            //  float hf = InfluenceFactorDefOf.InfluenceFactor.hillinessFactorDict.ContainsKey(hill) ? InfluenceFactorDefOf.InfluenceFactor.hillinessFactorDict[hill] : TerritoryManager.DefaultHillinessFactor;
+            //  float bf = InfluenceFactorDefOf.InfluenceFactor.biomeFactorDict.ContainsKey(biome) ? InfluenceFactorDefOf.InfluenceFactor.biomeFactorDict[biome] : TerritoryManager.DefaultBiomeFactor;
+            float hf;
+            if (VC_TerritorySetting.hillinessFactorDict.ContainsKey(hill))
+            {
+                hf = VC_TerritorySetting.hillinessFactorDict[hill];
+            }
+            else
+            {
+                Log.Message("Default hillness:" + hill);
+                VC_TerritorySetting.hillinessFactorDict[hill] = InfluenceFactorDefOf.InfluenceFactor.hillinessFactorDict.ContainsKey(hill) ? InfluenceFactorDefOf.InfluenceFactor.hillinessFactorDict[hill] : InfluenceFactorDefOf.InfluenceFactor.DefaultHillinessFactor;
+                hf = VC_TerritorySetting.hillinessFactorDict[hill];
+            }
+            float bf;
+            if (VC_TerritorySetting.biomeFactorDict.ContainsKey(biome)){ 
+                bf = VC_TerritorySetting.biomeFactorDict[biome];
+               }
+            else
+            {
+                Log.Message("Default biome:" + biome.defName);
+                VC_TerritorySetting.biomeFactorDict[biome] = InfluenceFactorDefOf.InfluenceFactor.biomeFactorDict.ContainsKey(biome) ? InfluenceFactorDefOf.InfluenceFactor.biomeFactorDict[biome] : InfluenceFactorDefOf.InfluenceFactor.DefaultBiomeFactor;
+                bf = VC_TerritorySetting.biomeFactorDict[biome];
+            }
             float newInfluence = Influence  * hf * bf;
 
             if (influencesDict.ContainsKey(settle.ID))
