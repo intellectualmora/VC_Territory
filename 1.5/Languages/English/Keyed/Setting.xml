@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<TerritoryDebug>Debug Tool (May be very time-consuming. If the mod is added mid-save, please click reinitialize territory after loaded game)</TerritoryDebug>
+    <Reset>Reinitialize Territory</Reset>
+    <TerritorySuccessfullyInitialized>Territory successfully initialized</TerritorySuccessfullyInitialized>
+    <TerritoryFailInitializedDetail>Territory initialization failed. See log for details</TerritoryFailInitializedDetail>
+    <TerritoryParemeters>Custom Territory Parameters</TerritoryParemeters>
+    <MoraTerritory>Mora's Territory Framework</MoraTerritory>
+    <TestMatrials>Test Material Status</TestMatrials>
+    <MatrialFailInitializedDetail>Material loading error</MatrialFailInitializedDetail>
+    <MatrialSuccessfullyInitialized>Material loaded successfully</MatrialSuccessfullyInitialized>
+    <ZeroTiles>Some settlements have zero territory</ZeroTiles>
+    <ZeroTiles>Some settlements have zero territory</ZeroTiles>
+    <TerritoriesError>Territories not loaded</TerritoriesError>
+    <TestSettlement>Test Settlement Status</TestSettlement>
+    <TerritorySettlementError>Settlement not loaded</TerritorySettlementError>
+    <TerritorySettlementListNum>Number of Territory Settlements:</TerritorySettlementListNum>
+    <MinInfluence>Minimum Influence Spread</MinInfluence>
+    <FactionInfluenceList>Faction Influence List</FactionInfluenceList>
+    <MaxDistance>Maximum Influence Spread Distance</MaxDistance>
+    <BiomeFactorList>Biome Decay Factor List</BiomeFactorList>
+    <HillinessFactorList>Hilliness Decay Factor List</HillinessFactorList>
+</LanguageData>

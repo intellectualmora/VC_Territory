@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<TerritoryDebug>Debug工具（可能会非常耗时，Mod中途加入存档请点击重新初始化）</TerritoryDebug>
+    <Reset>领土重新初始化</Reset>
+    <TerritorySuccessfullyInitialized>领土成功初始化</TerritorySuccessfullyInitialized>
+    <TerritoryFailInitializedDetail>领土初始化失败，详情请看日志</TerritoryFailInitializedDetail>
+    <TerritoryParemeters>领土参数自定义</TerritoryParemeters>
+    <MoraTerritory>莫拉的领土框架</MoraTerritory>
+    <TestMatrials>测试材质加载状态</TestMatrials>
+    <MatrialFailInitializedDetail>材质加载出错</MatrialFailInitializedDetail>
+    <MatrialSuccessfullyInitialized>材质加载成功</MatrialSuccessfullyInitialized>
+    <ZeroTiles>存在据点领土为0</ZeroTiles>
+    <ZeroTiles>存在据点领土为0</ZeroTiles>
+    <TerritoriesError>领土未加载</TerritoriesError>
+    <TestSettlement>测试据点加载状态</TestSettlement>
+    <TerritorySettlementError>据点未加载</TerritorySettlementError>
+    <TerritorySettlementListNum>领土据点数目：</TerritorySettlementListNum>
+    <MinInfluence>最小传播影响力</MinInfluence>
+    <FactionInfluenceList>派系影响力列表</FactionInfluenceList>
+    <MaxDistance>最大影响力传播距离</MaxDistance>
+    <BiomeFactorList>生物群系衰减参数列表</BiomeFactorList>
+    <HillinessFactorList>地势衰减参数列表</HillinessFactorList>
+
+</LanguageData>

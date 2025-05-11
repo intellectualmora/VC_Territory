@@ -56,6 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HarmonyInit.cs" />
+    <Compile Include="InfluenceHelper.cs" />
+    <Compile Include="Patch_RewardThreat.cs" />
+    <Compile Include="QuestPart_ChangeInfluence.cs" />
     <Compile Include="Setting.cs" />
     <Compile Include="InfluenceFactorDef.cs" />
     <Compile Include="InfluenceFactorDefOf.cs" />
