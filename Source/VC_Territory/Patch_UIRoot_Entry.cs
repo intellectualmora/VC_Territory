@@ -17,11 +17,20 @@ namespace VC_Territory
         [HarmonyPrefix]
         public static void Init_Prefix()
         {
-              Materials.Init(); // 安全执行图形资源初始化
-              if (!VC_TerritorySetting.isInit)
-                    VC_TerritorySetting.Init();
-        }
+            Materials.Init(); // 安全执行图形资源初始化
 
-    }
+        }
+        [HarmonyPatch(typeof(UIRoot_Entry), "Init")]
+        [HarmonyPostfix]
+        public static void Init_Postfix()
+        {
+            if (!VC_TerritorySetting.isInit)
+            {
+                VC_TerritorySetting.Init();
+            }
+        }
+        
+
+}
 }
 

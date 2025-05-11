@@ -6,7 +6,6 @@ using RimWorld.Planet;
 using MapModeFramework;
 using System.Collections.Generic;
 using System.Linq;
-
 namespace VC_Territory
 {
     public class VC_TerritorySetting : ModSettings
@@ -50,7 +49,6 @@ namespace VC_Territory
         public static void Init()
         {
             Log.Message("Initalize Setting");
-            Log.Message("Biome Count"+_biomeFactorDict_keys.Count);
 
             hillinessFactorDict = new Dictionary<Hilliness, float>();
             if (_hillinessFactorDict_keys != null && _hillinessFactorDict_values != null)
