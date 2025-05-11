@@ -15,8 +15,8 @@ namespace VC_Territory
         public Vector2 scrollPosition2 = Vector2.zero;
         public Vector2 scrollPosition3 = Vector2.zero;
         private Vector2 outerScrollPos = Vector2.zero;
-        public static float minInfluence;
-        public static float maxDistance;
+        public static float minInfluence = 0.1f;
+        public static float maxDistance = 100f;
         public static Dictionary<Hilliness, float> hillinessFactorDict;
         public static Dictionary<BiomeDef, float> biomeFactorDict;
         private static List<Hilliness> _hillinessFactorDict_keys;
@@ -141,11 +141,11 @@ namespace VC_Territory
             }
             listing.GapLine();
             listing.Label("MinInfluence".Translate());
-            if (minInfluence < 0)
+            if (minInfluence <= 0)
             {
                 minInfluence = InfluenceFactorDefOf.InfluenceFactor.minInfluence;
             }
-            if (maxDistance < 0)
+            if (maxDistance <= 0)
             {
                 maxDistance = InfluenceFactorDefOf.InfluenceFactor.maxDistance;
             }
