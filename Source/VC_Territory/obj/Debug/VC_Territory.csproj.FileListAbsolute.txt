@@ -5,3 +5,7 @@ E:\SteamLibrary\steamapps\common\RimWorld\Mods\VC_Territory\Source\VC_Territory\
 E:\SteamLibrary\steamapps\common\RimWorld\Mods\VC_Territory\Source\VC_Territory\obj\Debug\VC_Terri.06D6EAE2.Up2Date
 E:\SteamLibrary\steamapps\common\RimWorld\Mods\VC_Territory\Source\VC_Territory\obj\Debug\VC_Territory.dll
 E:\SteamLibrary\steamapps\common\RimWorld\Mods\VC_Territory\Source\VC_Territory\obj\Debug\VC_Territory.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\VC_Territory\1.5\Assemblies\VC_Territory.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\VC_Territory\Source\VC_Territory\obj\Debug\VC_Territory.csproj.AssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\VC_Territory\Source\VC_Territory\obj\Debug\VC_Territory.csproj.CoreCompileInputs.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\VC_Territory\Source\VC_Territory\obj\Debug\VC_Territory.dll
