@@ -17,12 +17,20 @@ namespace VC_Territory
         [HarmonyPostfix]
         public static void PostRemove_Postfix(Settlement __instance)
         {
-            TerritoryManager.Notify_Influence_Remove(__instance);            
-            MapModeUI mapModeUI = Find.WindowStack.WindowOfType<MapModeUI>();
-            if(mapModeUI.CurrentMapMode is MapMode_Territory)
+            try
             {
-                MapMode_Territory mt = (MapMode_Territory)mapModeUI.CurrentMapMode;
-                MapModeComponent.Instance.RequestMapModeSwitch(mt);
+                TerritoryManager.Notify_Influence_Remove(__instance);
+                MapModeUI mapModeUI = Find.WindowStack.WindowOfType<MapModeUI>();
+                if (mapModeUI != null && mapModeUI.CurrentMapMode is MapMode_Territory mt)
+                {
+                    MapModeComponent.Instance.RequestMapModeSwitch(mt);
+                }
+            }
+            catch (Exception e)
+            {
+                Log.Error($"TerritoryPostRemoveFaill: {e}");
+                Messages.Message("TerritoryPostRemoveFaill", MessageTypeDefOf.RejectInput, false);
+
             }
         }
 

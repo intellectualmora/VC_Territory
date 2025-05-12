@@ -20,4 +20,5 @@
     <MaxDistance>Maximum Influence Spread Distance</MaxDistance>
     <BiomeFactorList>Biome Decay Factor List</BiomeFactorList>
     <HillinessFactorList>Hilliness Decay Factor List</HillinessFactorList>
+    <FactionColorList>Faction's Territoies Color</FactionColorList>
 </LanguageData>

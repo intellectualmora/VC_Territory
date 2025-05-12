@@ -22,20 +22,19 @@ namespace VC_Territory
                 Faction playerSilentFail = Faction.OfPlayerSilentFail;
                 if (playerSilentFail != null)
                 {
-                    TerritoryManager.Notify_Influence_Add(settlement);
                     try
                     {
+                        TerritoryManager.Notify_Influence_Add(settlement);
                         MapModeUI mapModeUI = Find.WindowStack.WindowOfType<MapModeUI>();
-                        if (mapModeUI.CurrentMapMode is MapMode_Territory)
+                        if (mapModeUI != null && mapModeUI.CurrentMapMode is MapMode_Territory mt)
                         {
-                            MapMode_Territory mt = (MapMode_Territory)mapModeUI.CurrentMapMode;
                             MapModeComponent.Instance.RequestMapModeSwitch(mt);
-
                         }
                     }
                     catch (Exception e)
                     {
-
+                        Log.Error($"Patch_WorldObjectsHolder_AddFaill: {e}");
+                        Messages.Message("Patch_WorldObjectsHolder_AddFail", MessageTypeDefOf.RejectInput, false);
                     }
                 }
             }

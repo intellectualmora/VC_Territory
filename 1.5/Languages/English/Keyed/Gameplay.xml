@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <TaxRewardMessage>Tax revenue from {0} has been submitted: {1} silver collected (from {2} territories).</TaxRewardMessage>
+  <TaxReward>Tax Collected</TaxReward>
+  <InfluenceGain>Based on current wealth ({0}), influence increased by {1} points.</InfluenceGain>
+  <InfluenceLoss>Due to low wealth ({0}), influence decreased by {1} points.</InfluenceLoss>
+  <InfluenceStable>Current wealth is {0}, influence remains unchanged.</InfluenceStable>
+</LanguageData>

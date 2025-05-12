@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<TaxRewardMessage>来自{0}的税金已上缴：共 {1} 白银（{2} 块领土）</TaxRewardMessage>
+	<TaxReward>税金上缴</TaxReward>
+    <InfluenceGain>根据当前财富（{0}），影响力增加了 {1} 点。</InfluenceGain>
+	<InfluenceLoss>由于当前财富仅为 {0}，影响力减少了 {1} 点。</InfluenceLoss>
+	<InfluenceStable>当前财富为 {0}，影响力保持不变。</InfluenceStable>
+</LanguageData>

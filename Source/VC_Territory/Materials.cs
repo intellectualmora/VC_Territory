@@ -40,19 +40,49 @@ namespace VC_Territory
 
         private static void GenerateMats(ref Dictionary<string, Material> mats,FactionDef faction)
         {
+            Color color;
+            if (VC_TerritorySetting.factionColorDict != null)
+            {
+                if (VC_TerritorySetting.factionColorDict.ContainsKey(faction))
+                {
+                    color = new Color(VC_TerritorySetting.factionColorDict[faction].r, VC_TerritorySetting.factionColorDict[faction].g, VC_TerritorySetting.factionColorDict[faction].b, 0.7f);
+                }
+                else
+                {
+                    color = new Color(faction.DefaultColor.r, faction.DefaultColor.g, faction.DefaultColor.b, 0.7f);
+                }
+            }
+            else
+            {
+                color = new Color(faction.DefaultColor.r, faction.DefaultColor.g, faction.DefaultColor.b, 0.7f);
 
-                Color color = new Color(faction.DefaultColor.r, faction.DefaultColor.g, faction.DefaultColor.b,0.7f);
-                Material mat = MaterialPool.MatFrom(BaseContent.WhiteTex, ShaderDatabase.WorldOverlayTransparentLit, color, 3600);
-                if(!mats.ContainsKey(faction.defName))
-                    mats.Add(faction.defName,mat);
+            }
+            Material mat = MaterialPool.MatFrom(BaseContent.WhiteTex, ShaderDatabase.WorldOverlayTransparentLit, color, 3600);
+            if(!mats.ContainsKey(faction.defName))
+                mats.Add(faction.defName,mat);
         
 
         }
 
         private static void GenerateBorderMats(ref Dictionary<string, Material> mats, FactionDef faction)
         {
+            Color color;
+            if (VC_TerritorySetting.factionColorDict != null)
+            {
+                if (VC_TerritorySetting.factionColorDict.ContainsKey(faction))
+                {
+                    color = VC_TerritorySetting.factionColorDict[faction];
+                }
+                else
+                {
+                    color = faction.DefaultColor;
+                }
+            }
+            else
+            {
+                color = faction.DefaultColor;
 
-            Color color = faction.DefaultColor;
+            }
             Material mat = MaterialPool.MatFrom(BaseContent.WhiteTex, ShaderDatabase.WorldOverlayTransparentLit, color, 3600);
             if (!mats.ContainsKey(faction.defName))
                 mats.Add(faction.defName, mat);

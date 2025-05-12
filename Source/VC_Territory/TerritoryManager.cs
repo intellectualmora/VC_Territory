@@ -16,9 +16,6 @@ namespace VC_Territory
         public static List<Territory> territories = new List<Territory>(); //地图所有领土（只有被染色的才算领土，没染色的只是普通的tile）
         public static float minInfluence => VC_TerritorySetting.minInfluence;//最低影响力，当传播低于这个值的时候停止传播
         public static float maxDistance => VC_TerritorySetting.maxDistance;//影响力传播最远距离
-      //  public static float DefaultHillinessFactor = InfluenceFactorDefOf.InfluenceFactor.DefaultHillinessFactor;//默认地形传播衰减参数
-       // public static float DefaultBiomeFactor = InfluenceFactorDefOf.InfluenceFactor.DefaultBiomeFactor;//默认生物群落衰减参数
-        public static float DefaultFactionFactor = InfluenceFactorDefOf.InfluenceFactor.DefaultFactionFactor;//默认生物群落衰减参数
         public static List<TerritorySettlement> territorySettlementList = new List<TerritorySettlement>(); //所有拥有领土的据点列表
         private int tickCounter = 0;
         private const int LongTermTickInterval = 60000; //一天结算一次
@@ -67,7 +64,7 @@ namespace VC_Territory
             {
                 return;
             }
-            TerritorySettlement territorySettlement = new TerritorySettlement(settle, InfluenceFactorDefOf.InfluenceFactor.factionFactorDict.ContainsKey(settle.Faction.def) ? InfluenceFactorDefOf.InfluenceFactor.factionFactorDict[settle.Faction.def] : DefaultFactionFactor);
+            TerritorySettlement territorySettlement = new TerritorySettlement(settle, InfluenceFactorDefOf.InfluenceFactor.factionFactorDict.ContainsKey(settle.Faction.def) ? InfluenceFactorDefOf.InfluenceFactor.factionFactorDict[settle.Faction.def] : InfluenceFactorDefOf.InfluenceFactor.DefaultFactionFactor);
             territorySettlementList.Add(territorySettlement);
             Territory t;
             if (TerritoryManager.HasTerritory(settle.Tile))
@@ -108,17 +105,30 @@ namespace VC_Territory
         }
         public static void Notify_Influence_Change(TerritorySettlement ts) //检查影响是否改变
         {
-            if (!territorySettlementList.Contains(ts))
+            try
             {
-                return;
+                if (!territorySettlementList.Contains(ts))
+                {
+                    return;
+                }
+                foreach (var it in territories.FindAll(t => t.influencesDict.ContainsKey(ts.settlement.ID)))
+                {
+                    it.Notify_Influence_Change(ts.settlement, ts.Influence);
+                }
+                foreach (var it in territories.FindAll(t => t.influencesDict.ContainsKey(ts.settlement.ID)))
+                {
+                    SelectSettlement(it);
+                }
+                MapModeUI mapModeUI = Find.WindowStack.WindowOfType<MapModeUI>();
+                if (mapModeUI != null && mapModeUI.CurrentMapMode is MapMode_Territory mt)
+                {
+                    MapModeComponent.Instance.RequestMapModeSwitch(mt);
+                }
             }
-            foreach (var it in territories.FindAll(t => t.influencesDict.ContainsKey(ts.settlement.ID)))
+            catch (Exception ex)
             {
-                it.Notify_Influence_Change(ts.settlement,ts.Influence);
-            }
-            foreach (var it in territories.FindAll(t => t.influencesDict.ContainsKey(ts.settlement.ID)))
-            {
-                SelectSettlement(it);
+                Log.Error($"TerritoryInfluenceChangeFaill: {ex}");
+                Messages.Message("TerritoryInfluenceChangeFaill", MessageTypeDefOf.RejectInput, false);
             }
 
         }
@@ -165,6 +175,8 @@ namespace VC_Territory
 
         public void TerritoryManagerLongTermTick()
         {
+            Gameplay.TaxReward(territorySettlementList.Find(ts=>ts.settlement.Faction == Faction.OfPlayer));
+            Gameplay.PlayerInfluenceChange(territorySettlementList.Find(ts => ts.settlement.Faction == Faction.OfPlayer));
             foreach (var comp in extraComponents)
             {
                 if (comp is ITickableComponent tickable)

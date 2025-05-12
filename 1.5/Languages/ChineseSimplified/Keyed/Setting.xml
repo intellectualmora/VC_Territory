@@ -20,5 +20,5 @@
     <MaxDistance>最大影响力传播距离</MaxDistance>
     <BiomeFactorList>生物群系衰减参数列表</BiomeFactorList>
     <HillinessFactorList>地势衰减参数列表</HillinessFactorList>
-
+    <FactionColorList>派系领土颜色</FactionColorList>
 </LanguageData>

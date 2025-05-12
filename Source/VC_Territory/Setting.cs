@@ -14,15 +14,94 @@ namespace VC_Territory
         public Vector2 scrollPosition = Vector2.zero;
         public Vector2 scrollPosition2 = Vector2.zero;
         public Vector2 scrollPosition3 = Vector2.zero;
+        public Vector2 scrollPosition4 = Vector2.zero;
+
         private Vector2 outerScrollPos = Vector2.zero;
         public static float minInfluence = 0.1f;
         public static float maxDistance = 100f;
         public static Dictionary<Hilliness, float> hillinessFactorDict;
         public static Dictionary<BiomeDef, float> biomeFactorDict;
+        public static Dictionary<FactionDef, Color> factionColorDict;
+
+
         private static List<Hilliness> _hillinessFactorDict_keys;
         private static List<float> _hillinessFactorDict_values;
         private static List<string> _biomeFactorDict_keys;
         private static List<float> _biomeFactorDict_values;
+        private static List<string> _factionColorDict_keys;
+        private static List<float> _factionColorDict_values_r;
+        private static List<float> _factionColorDict_values_g;
+        private static List<float> _factionColorDict_values_b;
+
+        private static readonly List<Color> presetColors = new List<Color>
+        {
+            // 基础色
+            Color.red,
+            Color.green,
+            Color.blue,
+            Color.yellow,
+            Color.cyan,
+            Color.magenta,
+            Color.white,
+            Color.black,
+            Color.gray,
+
+            // 深/亮调
+            new Color(0.8f, 0.2f, 0.2f),      // 深红
+            new Color(0.2f, 0.8f, 0.2f),      // 草绿
+            new Color(0.2f, 0.2f, 0.8f),      // 深蓝
+            new Color(1f, 1f, 0.6f),          // 柠檬黄
+            new Color(0.5f, 1f, 1f),          // 浅青
+            new Color(1f, 0.5f, 1f),          // 粉紫
+            new Color(0.8f, 0.8f, 0.8f),      // 浅灰
+            new Color(0.4f, 0.4f, 0.4f),      // 深灰
+
+            // 棕/橙/金属色
+            new Color(0.5f, 0.25f, 0f),       // 棕色
+            new Color(1f, 0.6f, 0.2f),        // 橙色
+            new Color(1f, 0.84f, 0f),         // 金色
+            new Color(0.75f, 0.75f, 0.75f),   // 银色
+
+            // 粉色系
+            new Color(1f, 0.7f, 0.8f),        // 樱花粉
+            new Color(1f, 0.4f, 0.7f),        // 粉红
+            new Color(1f, 0.6f, 0.6f),        // 肤色
+
+            // 蓝绿色系
+            new Color(0.2f, 0.6f, 0.6f),      // 深青
+            new Color(0f, 0.5f, 0.5f),        // 孔雀蓝
+            new Color(0.4f, 0.7f, 0.7f),      // 浅青灰
+
+            // 紫色系
+            new Color(0.5f, 0f, 1f),          // 紫罗兰
+            new Color(0.6f, 0.4f, 1f),        // 浅紫
+            new Color(0.4f, 0.2f, 0.6f),      // 暗紫
+
+            // 绿色系
+            new Color(0.4f, 0.6f, 0.2f),      // 橄榄绿
+            new Color(0.3f, 0.5f, 0.1f),      // 军绿
+            new Color(0.6f, 1f, 0.6f),        // 浅绿
+
+            // 蓝色系
+            new Color(0f, 0f, 0.5f),          // 海军蓝
+            new Color(0.2f, 0.4f, 1f),        // 电蓝
+            new Color(0.6f, 0.8f, 1f),        // 天空蓝
+
+            // 补充
+            new Color(0.2f, 0.2f, 0.2f),      // 几乎黑
+            new Color(1f, 0.8f, 0.4f),        // 奶油黄
+            new Color(0.4f, 0.3f, 0.2f),      // 木头棕
+            new Color(0.6f, 0.3f, 0.2f),      // 烧砖红
+        };
+
+        private Texture2D SolidColorTexture(Color color)
+        {
+            Texture2D tex = new Texture2D(1, 1);
+            tex.SetPixel(0, 0, color);
+            tex.Apply();
+            return tex;
+        }
+
         public override void ExposeData()
         {
             Scribe_Values.Look(ref minInfluence, "VC_minInfluence", 0.1f);
@@ -31,20 +110,22 @@ namespace VC_Territory
             {
                 _hillinessFactorDict_keys = new List<Hilliness>(hillinessFactorDict.Keys);
                 _hillinessFactorDict_values = new List<float>(hillinessFactorDict.Values);
-                _biomeFactorDict_keys = new List<string>();
+                _biomeFactorDict_keys = new List<string>(biomeFactorDict.Keys.Select(b=>b.defName).ToList());
                 _biomeFactorDict_values = new List<float>(biomeFactorDict.Values);
-
-                foreach (var biome in biomeFactorDict.Keys)
-                {
-                    _biomeFactorDict_keys.Add(biome.defName);
-                }
+                _factionColorDict_keys = new List<string>(DefDatabase<FactionDef>.AllDefs.Select(f => f.defName).ToList());
+                _factionColorDict_values_r = new List<float>(Materials.matsTerritory.Select(c=>c.Value.color.r).ToList());
+                _factionColorDict_values_g = new List<float>(Materials.matsTerritory.Select(c => c.Value.color.g).ToList());
+                _factionColorDict_values_b = new List<float>(Materials.matsTerritory.Select(c => c.Value.color.b).ToList());
             }
             Scribe_Collections.Look(ref _hillinessFactorDict_keys, "VC_hillinessFactorDict_keys", LookMode.Value);
             Scribe_Collections.Look(ref _hillinessFactorDict_values, "VC_hillinessFactorDict_values", LookMode.Value);
             Scribe_Collections.Look(ref _biomeFactorDict_keys, "VC_biomeFactorDict_keys", LookMode.Value);
             Scribe_Collections.Look(ref _biomeFactorDict_values, "VC_biomeFactorDict_values", LookMode.Value);
-        
 
+            Scribe_Collections.Look(ref _factionColorDict_keys, "VC_factionColorDict_keys", LookMode.Value);
+            Scribe_Collections.Look(ref _factionColorDict_values_r, "VC_factionColorDict_values_r", LookMode.Value);
+            Scribe_Collections.Look(ref _factionColorDict_values_g, "VC_factionColorDict_values_g", LookMode.Value);
+            Scribe_Collections.Look(ref _factionColorDict_values_b, "VC_factionColorDict_values_b", LookMode.Value);
         }
         public static void Init()
         {
@@ -68,6 +149,17 @@ namespace VC_Territory
                         biomeFactorDict[DefDatabase<BiomeDef>.AllDefs.FirstOrDefault(b => b.defName == _biomeFactorDict_keys[i])] = _biomeFactorDict_values[i];
                 }
             }
+
+            factionColorDict = new Dictionary<FactionDef, Color>();
+            if (_factionColorDict_keys != null && _factionColorDict_values_r != null && _factionColorDict_values_g != null && _factionColorDict_values_b != null)
+            {
+                for (int i = 0; i < _factionColorDict_keys.Count && i < _factionColorDict_values_r.Count; i++)
+                {
+                    if (DefDatabase<FactionDef>.AllDefs.Any(b => b.defName == _factionColorDict_keys[i]))
+                        factionColorDict[DefDatabase<FactionDef>.AllDefs.FirstOrDefault(b => b.defName == _factionColorDict_keys[i])] = new Color(_factionColorDict_values_r[i], _factionColorDict_values_g[i], _factionColorDict_values_b[i]);
+                }
+            }
+
             isInit = true;
         }
         public void DoWindowContents(Rect inRect)
@@ -226,40 +318,59 @@ namespace VC_Territory
             Widgets.EndScrollView();
             listing.GapLine();
 
+            listing.Label("FactionColorList".Translate());
+            float scrollViewInnerHeight3 = DefDatabase<FactionDef>.AllDefs.Count() * 24f + 10f; // 每个项约占24像素
+            Rect scrollOutRect3 = listing.GetRect(viewHeight); // 分配区域
+            Rect scrollViewRect3 = new Rect(0, 0, scrollOutRect3.width - 32f, scrollViewInnerHeight3);
+            Widgets.BeginScrollView(scrollOutRect3, ref scrollPosition3, scrollViewRect3);
+            curY = 0f;
+            foreach (var faction in DefDatabase<FactionDef>.AllDefs)
+            {
+                Widgets.Label(new Rect(0f, curY, scrollViewRect3.width, 24f), faction.defName);
+                if (!factionColorDict.ContainsKey(faction))
+                {
+                    factionColorDict[faction] = faction.DefaultColor;
+                }
+                Color color = factionColorDict[faction];
 
 
-            //listing.Label("FactionInfluenceList".Translate());
-            //float scrollViewInnerHeight3 = DefDatabase<FactionDef>.AllDefs.Count() * 24f + 10f; // 每个项约占24像素
-            //Rect scrollOutRect3 = listing.GetRect(viewHeight); // 分配区域
-            //Rect scrollViewRect3 = new Rect(0, 0, scrollOutRect3.width - 32f, scrollViewInnerHeight); // 减去滚动条宽度
-            //Widgets.BeginScrollView(scrollOutRect3, ref scrollPosition3, scrollViewRect3);
-            //curY = 0f;
-            //foreach (var faction in DefDatabase<FactionDef>.AllDefs)
-            //{
-            //    Widgets.Label(new Rect(0f, curY, scrollViewRect.width, 24f), faction.defName);
-            //    if (!InfluenceFactorDefOf.InfluenceFactor.factionFactorDict.ContainsKey(faction))
-            //    {
-            //        InfluenceFactorDefOf.InfluenceFactor.factionFactorDict[faction] = InfluenceFactorDefOf.InfluenceFactor.DefaultFactionFactor; // 默认值
-            //    }
+                Rect dropdownRect = new Rect(150, curY, scrollViewRect3.width, 24f);
 
-            //    Rect rowRect = new Rect(0f, curY, scrollViewRect.width, 32f);
-            //    Rect labelRect = new Rect(rowRect.x, rowRect.y, rowRect.width * 0.4f, 32f);
-            //    Rect sliderRect = new Rect(labelRect.xMax + 10f, rowRect.y + 6f, rowRect.width * 0.5f, 20f);
+                Widgets.Dropdown<FactionDef, Color>(
+                    dropdownRect,
+                    faction,
+                    f => factionColorDict[f],
+                    f => presetColors.Select(c =>
+                    new Widgets.DropdownMenuElement<Color>
+                    {
+                        option = new FloatMenuOption(
+                            label: ColorUtility.ToHtmlStringRGB(c), 
+                            action: () =>
+                            {
+                                factionColorDict[f] = c;
+                                Materials.Init();
+                            },
+                            extraPartWidth: 24f,
+                            extraPartOnGUI: rect =>
+                            {
+                               
+                                Widgets.DrawBoxSolid(rect, c);
+                                return false; 
+                            }
+                        ),
+                        payload = c
+                    }),
+                    buttonLabel: "显示当前颜色", 
+                    buttonIcon: SolidColorTexture(factionColorDict[faction])
+                );
 
-            //    Widgets.Label(labelRect, faction.defName);
 
-            //    InfluenceFactorDefOf.InfluenceFactor.factionFactorDict[faction] = Widgets.HorizontalSlider(
-            //        sliderRect,
-            //       InfluenceFactorDefOf.InfluenceFactor.factionFactorDict[faction],
-            //        0f, 100f,
-            //        middleAlignment: false,
-            //        label: InfluenceFactorDefOf.InfluenceFactor.factionFactorDict[faction].ToString(),
-            //        roundTo: 1f
-            //    );
-            //    curY += 32f;
-            //}
-            //Widgets.EndScrollView();
-            //listing.GapLine();
+                curY += 32f;
+            }
+            Widgets.EndScrollView();
+            listing.GapLine();
+
+
 
             listing.End();
             Widgets.EndScrollView();

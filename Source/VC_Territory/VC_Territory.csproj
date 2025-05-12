@@ -71,6 +71,7 @@
     <Compile Include="Patch_WorldObjectsHolder_Add.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ITickableComponent.cs" />
+    <Compile Include="Gameplay.cs" />
     <Compile Include="TerritorySettlement.cs" />
     <Compile Include="Territory.cs" />
     <Compile Include="TerritoryManager.cs" />
