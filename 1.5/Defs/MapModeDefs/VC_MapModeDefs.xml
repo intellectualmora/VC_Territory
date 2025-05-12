@@ -12,7 +12,7 @@
     <disableFeaturesText>false</disableFeaturesText>
     <canCache>false</canCache>
     <RegionProperties>
-			<overrideSelector>true</overrideSelector>
+			<overrideSelector>false</overrideSelector>
 			<doBorders>true</doBorders>
 			<borderWidth>0.5</borderWidth>
 		</RegionProperties>

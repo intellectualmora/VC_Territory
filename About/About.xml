@@ -26,7 +26,6 @@
 		<li>brrainz.harmony</li>
 		<li>NozoMe.MapModeFramework</li>
 	</loadAfter>
-	<incompatibleWith>
-		<li>OskarPotocki.VFE.Medieval2</li>
-	</incompatibleWith>
+	<!-- <incompatibleWith>
+	</incompatibleWith> -->
 </ModMetaData>

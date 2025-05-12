@@ -26,8 +26,8 @@ namespace VC_Territory
                 TerritoryManager.territorySettlementList.FirstOrDefault(x=>x.settlement == rndSettlemnt)?.AddInfluence(amount);
 
                 // Select the influenced settlement
-                CameraJumper.TryShowWorld();
-                Find.WorldSelector.Select(rndSettlemnt);
+               // CameraJumper.TryShowWorld(); 这个跳转世界我先注释了
+              //  Find.WorldSelector.Select(rndSettlemnt);
                 string influenceString = amount > 0f ? "VCT.InfluenceAdded".Translate(f.GetCallLabel(), amount.ToString("0.0")) : "VCT.InfluenceReduced".Translate(f.GetCallLabel(), (-amount).ToString("0.0"));
                 Messages.Message(influenceString, MessageTypeDefOf.NeutralEvent);
             }
