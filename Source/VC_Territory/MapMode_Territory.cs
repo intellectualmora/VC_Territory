@@ -74,7 +74,10 @@ namespace VC_Territory
             {
             
                 List<int> tiles =ts.territoryList.Select(t => t.tileId).ToList();
-
+                if(tiles.Count <= 0)
+                {
+                    return; //zero tiles 
+                }
                 try
                 {
                     MapModeFramework.Region region = new MapModeFramework.Region(ts.settlement.ID.ToString(), tiles, false, FactionMaterials[ts.factiondef.defName], true, FactionBorderMaterials[ts.factiondef.defName]);

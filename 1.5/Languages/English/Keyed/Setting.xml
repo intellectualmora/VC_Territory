@@ -21,4 +21,16 @@
     <BiomeFactorList>Biome Decay Factor List</BiomeFactorList>
     <HillinessFactorList>Hilliness Decay Factor List</HillinessFactorList>
     <FactionColorList>Faction's Territoies Color</FactionColorList>
+    <TriggerTax>Enable Tax</TriggerTax>
+    <TriggerTaxTooltip>If enabled, daily tax income will be generated based on the number of territories you own.</TriggerTaxTooltip>
+    <TriggerInfluenceChange>Enable Influence Adjustment</TriggerInfluenceChange>
+    <TriggerInfluenceChangeTooltip>If enabled, influence will change daily based on current wealth.</TriggerInfluenceChangeTooltip>
+
+
+
+
+
+
+
+
 </LanguageData>

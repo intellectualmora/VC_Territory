@@ -175,8 +175,10 @@ namespace VC_Territory
 
         public void TerritoryManagerLongTermTick()
         {
-            Gameplay.TaxReward(territorySettlementList.Find(ts=>ts.settlement.Faction == Faction.OfPlayer));
-            Gameplay.PlayerInfluenceChange(territorySettlementList.Find(ts => ts.settlement.Faction == Faction.OfPlayer));
+            if(VC_TerritorySetting.triggerTax)
+                Gameplay.TaxReward(territorySettlementList.Find(ts=>ts.settlement.Faction == Faction.OfPlayer));
+            if (VC_TerritorySetting.triggerInfluenceChange)
+                Gameplay.PlayerInfluenceChange(territorySettlementList.Find(ts => ts.settlement.Faction == Faction.OfPlayer));
             foreach (var comp in extraComponents)
             {
                 if (comp is ITickableComponent tickable)

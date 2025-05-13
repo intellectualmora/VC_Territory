@@ -27,7 +27,7 @@ namespace VC_Territory
                 return;
 
             int rewardPerTerritory = 1;
-            int totalReward = rewardPerTerritory * territoryCount;
+            int totalReward = (int)(0.2f*rewardPerTerritory * territoryCount);
 
             Thing silver = ThingMaker.MakeThing(ThingDefOf.Silver);
             silver.stackCount = totalReward;
@@ -59,11 +59,10 @@ namespace VC_Territory
             // 读取当前地图的财富值
             float currentWealth = map.wealthWatcher.WealthTotal;
 
-            // 每 1000 白银对应 1 点影响力
-            float influencePerWealth = 1f / 1000f;
-            float expectedInfluence = 10f + currentWealth * influencePerWealth;
+            // 每 10000 白银对应 1 点影响力
+            float influencePerWealth = 1f / 20000f;
+            float expectedInfluence = Mathf.Max(9f + currentWealth * influencePerWealth,10f);
 
-            // 实际影响力为领土数量总和
             float currentInfluence = ts.Influence;
 
             // 差值

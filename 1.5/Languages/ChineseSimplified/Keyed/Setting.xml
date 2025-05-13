@@ -21,4 +21,9 @@
     <BiomeFactorList>生物群系衰减参数列表</BiomeFactorList>
     <HillinessFactorList>地势衰减参数列表</HillinessFactorList>
     <FactionColorList>派系领土颜色</FactionColorList>
+    <TriggerTax>启用税收结算</TriggerTax>
+    <TriggerTaxTooltip>如果启用，每日会根据领土数量获得税金。</TriggerTaxTooltip>
+    <TriggerInfluenceChange>启用影响力变化</TriggerInfluenceChange>
+    <TriggerInfluenceChangeTooltip>如果启用，每日会根据财富调整影响力。</TriggerInfluenceChangeTooltip>
+
 </LanguageData>

@@ -17,6 +17,7 @@ namespace VC_Territory
 
         public static Dictionary<string, Material> matsTerritory;
         public static Dictionary<string, Material> matsBorderTerritory;
+        private static Dictionary<string, Material> colorMaterialCache = new Dictionary<string, Material>();
 
         public static readonly Material matWhiteOverlay;
 
@@ -57,11 +58,13 @@ namespace VC_Territory
                 color = new Color(faction.DefaultColor.r, faction.DefaultColor.g, faction.DefaultColor.b, 0.7f);
 
             }
-            Material mat = MaterialPool.MatFrom(BaseContent.WhiteTex, ShaderDatabase.WorldOverlayTransparentLit, color, 3600);
-            if(!mats.ContainsKey(faction.defName))
-                mats.Add(faction.defName,mat);
-        
-
+            string colorKey = $"{color.r:F2},{color.g:F2},{color.b:F2},{color.a:F2}";
+            if (!colorMaterialCache.TryGetValue(colorKey, out Material mat))
+            {
+                mat = MaterialPool.MatFrom(BaseContent.WhiteTex, ShaderDatabase.WorldOverlayTransparentLit, color, 3600);
+                colorMaterialCache[colorKey] = mat;
+            }
+            mats[faction.defName] = mat;
         }
 
         private static void GenerateBorderMats(ref Dictionary<string, Material> mats, FactionDef faction)
@@ -83,9 +86,13 @@ namespace VC_Territory
                 color = faction.DefaultColor;
 
             }
-            Material mat = MaterialPool.MatFrom(BaseContent.WhiteTex, ShaderDatabase.WorldOverlayTransparentLit, color, 3600);
-            if (!mats.ContainsKey(faction.defName))
-                mats.Add(faction.defName, mat);
+            string colorKey = $"{color.r:F2},{color.g:F2},{color.b:F2},{color.a:F2}";
+            if (!colorMaterialCache.TryGetValue(colorKey, out Material mat))
+            {
+                mat = MaterialPool.MatFrom(BaseContent.WhiteTex, ShaderDatabase.WorldOverlayTransparentLit, color, 3600);
+                colorMaterialCache[colorKey] = mat;
+            }
+            mats[faction.defName] = mat;
 
         }
 

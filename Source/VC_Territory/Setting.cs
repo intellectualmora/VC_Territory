@@ -23,6 +23,9 @@ namespace VC_Territory
         public static Dictionary<BiomeDef, float> biomeFactorDict;
         public static Dictionary<FactionDef, Color> factionColorDict;
 
+        public static bool triggerTax = true;
+        public static bool triggerInfluenceChange = true;
+
 
         private static List<Hilliness> _hillinessFactorDict_keys;
         private static List<float> _hillinessFactorDict_values;
@@ -106,6 +109,10 @@ namespace VC_Territory
         {
             Scribe_Values.Look(ref minInfluence, "VC_minInfluence", 0.1f);
             Scribe_Values.Look(ref maxDistance, "VC_maxDistance", 100f);
+
+            Scribe_Values.Look(ref triggerTax, "VC_triggerTax");
+            Scribe_Values.Look(ref triggerInfluenceChange, "VC_triggerInfluenceChange");
+
             if (Scribe.mode == LoadSaveMode.Saving)
             {
                 _hillinessFactorDict_keys = new List<Hilliness>(hillinessFactorDict.Keys);
@@ -232,6 +239,13 @@ namespace VC_Territory
                 }
             }
             listing.GapLine();
+
+            listing.CheckboxLabeled("TriggerTax".Translate(), ref triggerTax, "TriggerTaxTooltip".Translate());
+            listing.CheckboxLabeled("TriggerInfluenceChange".Translate(), ref triggerInfluenceChange, "TriggerInfluenceChangeTooltip".Translate());
+
+            listing.GapLine();
+
+
             listing.Label("MinInfluence".Translate());
             if (minInfluence <= 0)
             {
@@ -349,6 +363,18 @@ namespace VC_Territory
                             {
                                 factionColorDict[f] = c;
                                 Materials.Init();
+                                try
+                                {
+                                    MapModeUI mapModeUI = Find.WindowStack.WindowOfType<MapModeUI>();
+                                    if (mapModeUI != null && mapModeUI.CurrentMapMode is MapMode_Territory mt)
+                                    {
+                                        MapModeComponent.Instance.RequestMapModeSwitch(mt);
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    Log.Error("领土窗口渲染打开错误");
+                                }
                             },
                             extraPartWidth: 24f,
                             extraPartOnGUI: rect =>
