@@ -46,7 +46,7 @@
   - Flag for update.
 
 - `void Update_LongTerm_Tick()`
-  - Triggers influence recalculation if `isDirty`.
+  - Triggers influence recalculation or extra actions every 60,000 ticks, regardless of isDirty status.
 
 ### `Territory` – Tile Control and Influence
 
@@ -87,6 +87,13 @@
 
 - `static void SelectSettlement(Territory t)`
   - Determines which faction owns a tile.
+
+- `void TerritoryManagerLongTermTick()`
+  - Performs long-term updates every 60,000 ticks.
+  - Invokes `LongTermTick()` on all `ITickableComponent` entries in `extraComponents`.
+  - Calls `Update_LongTerm_Tick()` on all `TerritorySettlement` instances.
+  - Calls `Update_LongTerm_Tick()` on all `Territory` tiles.
+
 
 ### `InfluenceHelper` – Influence Modifying Utilities
 
