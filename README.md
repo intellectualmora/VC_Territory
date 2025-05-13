@@ -15,8 +15,6 @@
   "Includes a `TerritoryManager` interface designed to support **future gameplay mechanics** (e.g., taxation, lordship, border friction).  
   > *Note: Currently, no extra gameplay mechanics are implemented.*"
   
-# Influence Mechanic in **VC_Territory** (RimWorld Mod)
-
 ## What is **Influence** in VC_Territory?
 
 **Influence** is a numeric value representing a settlement’s power or control in the world. Every settlement in the mod has an **Influence** score that denotes how far its faction’s reach extends on the world map. In essence, Influence measures a faction’s territorial strength emanating from that settlement. It is used by the mod’s territory system to determine which faction controls each map tile and how borders are drawn between factions.
